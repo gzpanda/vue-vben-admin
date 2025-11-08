@@ -60,9 +60,9 @@ const router = useRouter();
 
 const REMEMBER_ME_KEY = `REMEMBER_ME_PHONE_${location.hostname}`;
 
-const localUsername = localStorage.getItem(REMEMBER_ME_KEY) || '';
+const localPhone = localStorage.getItem(REMEMBER_ME_KEY) || '';
 
-const rememberMe = ref(!!localUsername);
+const rememberMe = ref(!!localPhone);
 
 async function handleSubmit() {
   const { valid } = await formApi.validate();
@@ -70,7 +70,7 @@ async function handleSubmit() {
   if (valid) {
     localStorage.setItem(
       REMEMBER_ME_KEY,
-      rememberMe.value ? values?.username : '',
+      rememberMe.value ? values?.phone : '',
     );
     emit('submit', values);
   }
@@ -81,8 +81,8 @@ function handleGo(path: string) {
 }
 
 onMounted(() => {
-  if (localUsername) {
-    formApi.setFieldValue('phone', localUsername);
+  if (localPhone) {
+    formApi.setFieldValue('phone', localPhone);
   }
 });
 
