@@ -58,7 +58,7 @@ const [Form, formApi] = useVbenForm(
 );
 const router = useRouter();
 
-const REMEMBER_ME_KEY = `REMEMBER_ME_USERNAME_${location.hostname}`;
+const REMEMBER_ME_KEY = `REMEMBER_ME_PHONE_${location.hostname}`;
 
 const localUsername = localStorage.getItem(REMEMBER_ME_KEY) || '';
 
@@ -82,7 +82,7 @@ function handleGo(path: string) {
 
 onMounted(() => {
   if (localUsername) {
-    formApi.setFieldValue('username', localUsername);
+    formApi.setFieldValue('phone', localUsername);
   }
 });
 

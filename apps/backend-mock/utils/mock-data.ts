@@ -1,5 +1,6 @@
 export interface UserInfo {
   id: number;
+  phone: string;
   password: string;
   realName: string;
   roles: string[];
@@ -15,6 +16,7 @@ export interface TimezoneOption {
 export const MOCK_USERS: UserInfo[] = [
   {
     id: 0,
+    phone: '18588887686',
     password: '123456',
     realName: 'Vben',
     roles: ['super'],
@@ -22,6 +24,7 @@ export const MOCK_USERS: UserInfo[] = [
   },
   {
     id: 1,
+    phone: '18620014363',
     password: '123456',
     realName: 'Admin',
     roles: ['admin'],
@@ -30,6 +33,7 @@ export const MOCK_USERS: UserInfo[] = [
   },
   {
     id: 2,
+    phone: '18924232570',
     password: '123456',
     realName: 'Jack',
     roles: ['user'],
