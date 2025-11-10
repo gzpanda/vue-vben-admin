@@ -11,13 +11,13 @@ const routes: RouteRecordRaw[] = [
     path: '/resource',
     children: [
       {
-        path: '/resource/healthcare',
-        name: 'Healthcare',
+        path: '/resource/organization',
+        name: 'Organization',
         meta: {
           icon: 'mdi:office-building-cog',
-          title: '医疗机构',
+          title: '机构单位',
         },
-        component: () => import('#/views/resource/healthcare/list.vue'),
+        component: () => import('#/views/resource/organization/list.vue'),
       },
       {
         path: '/system/menu',
@@ -38,7 +38,7 @@ const routes: RouteRecordRaw[] = [
       title: '医疗机构详情',
       hideInMenu: true,
     },
-    component: () => import('#/views/resource/healthcare/detail.vue'),
+    component: () => import('#/views/resource/organization/detail.vue'),
   },
 ];
 
