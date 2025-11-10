@@ -25,9 +25,10 @@ export function useGridFormSchema(): VbenFormSchema[] {
       componentProps: {
         allowClear: true,
         options: [
-          { label: '公立', value: '公立' },
-          { label: '私立', value: '私立' },
-          { label: '口腔', value: '口腔' },
+          { label: '公立医院', value: '公立医院' },
+          { label: '私立医院', value: '私立医院' },
+          { label: '口腔机构', value: '口腔机构' },
+          { label: '医美机构', value: '医美机构' },
         ],
       },
       fieldName: 'nature',
@@ -39,6 +40,7 @@ export function useGridFormSchema(): VbenFormSchema[] {
         allowClear: true,
         options: [
           { label: '三甲', value: '三甲' },
+          { label: '三级', value: '三级' },
           { label: '二级', value: '二级' },
           { label: '社区', value: '社区' },
         ],
